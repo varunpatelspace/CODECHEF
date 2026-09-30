@@ -12,25 +12,25 @@
 using namespace std;
 
 int main() {
-    int t,n,m,k,a[m];// your code goes here
-    cin>>t;
-    while(t--){
-        cin>>n >>m >>k;
-        for(int i=0; i<m; i++){
-        cin>>a[i];
+    int t, n, m, k;
+    cin >> t;
+
+    while (t--) {
+        cin >> n >> m >> k;
+
+        int a[m + k];  
+
+        for (int i = 0; i < m; i++) {
+            cin >> a[i];
         }
-      for (int j = 0; j < k; j++) {
 
-        for (int d = 1; d <= N; d++) {
+        for (int j = 0; j < k; j++) {
 
-            bool occupied = false;
+            for (int d = 1; d <= n; d++) {
 
-            for (int p = 0; p < m; p++) {
-                if (a[p] == p) {
-                    occupied = true;
-                    break;
-                }
-            }
-             if (!occupied) {
-                cout << p << " ";
-                a[m] = p;
+                bool occupied = false;
+
+                for (int p = 0; p < m; p++) {
+
+                    if (a[p] == d) {   
+                        occupied = true;
