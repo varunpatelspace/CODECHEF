@@ -12,13 +12,14 @@
 using namespace std;
 
 int main() {
-    int a, b;
-    cin >> a >> b;
-    if (a + b < 30) {
-        cout << a + b;
+    int A, B;
+    cin >> A >> B;
+
+    if (3 * A < A + B) {
+        cout << 3 * A;
     } else {
-        cout << 30;
+        cout << A + B;
     }
+
     return 0;
 }
-
